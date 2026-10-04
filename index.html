@@ -2,32 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<!-- This meta tag is crucial for mobile responsiveness -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Happy Girlfriend's Day ❤️</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@200;300;400;600&display=swap');
-
-/* Base reset to ensure it fills the Google Sites iframe */
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  background: #060000;
-  overflow-x: hidden;
-}
 
 #gfday{
   --red:#ff1e3c;
   --red2:#ff5c7a;
   position:relative;
   width:100%;
-  /* dvh handles mobile browser address bars perfectly */
-  min-height: 100vh;
-  min-height: 100dvh;
-  /* Fluid padding that shrinks on small screens */
-  padding: clamp(30px, 6vw, 70px) clamp(10px, 4vw, 18px) clamp(50px, 8vw, 90px);
+  min-height:100vh;
+  padding:70px 18px 90px;
   overflow:hidden;
   background:
     radial-gradient(1100px 600px at 50% -8%, #3d0011 0%, rgba(6,0,0,0) 70%),
@@ -38,8 +24,6 @@ html, body {
   text-align:center;
   line-height:1.6;
   -webkit-font-smoothing:antialiased;
-  box-sizing: border-box;
-  -webkit-tap-highlight-color: transparent; /* Removes blue flash on mobile tap */
 }
 #gfday *,#gfday *::before,#gfday *::after{box-sizing:border-box;}
 #gfday p,#gfday h1,#gfday h2,#gfday div,#gfday span,#gfday b{margin:0;padding:0;}
@@ -72,7 +56,7 @@ html, body {
   100%{opacity:0; transform:translate(-50%,-135%) scale(.9) rotate(var(--rot,0deg));}
 }
 
-#gfday .gf-inner{position:relative;z-index:3;max-width:900px;margin:0 auto; width: 100%;}
+#gfday .gf-inner{position:relative;z-index:3;max-width:900px;margin:0 auto;}
 #gfday .gf-inner > *{animation:gfUp .9s cubic-bezier(.2,.8,.3,1) both;}
 #gfday .gf-inner > *:nth-child(1){animation-delay:.05s}
 #gfday .gf-inner > *:nth-child(2){animation-delay:.15s}
@@ -85,33 +69,30 @@ html, body {
 
 #gfday .gf-eyebrow{
   display:inline-block;
-  font-size:clamp(9px, 2vw, 11px);
-  letter-spacing:clamp(0.2em, 1vw, 0.42em);
-  text-transform:uppercase;
+  font-size:11px;letter-spacing:.42em;text-transform:uppercase;
   color:#ff5c7a;
   border:1px solid rgba(255,30,60,.35);
   border-radius:999px;
-  padding:clamp(6px, 1.5vw, 9px) clamp(14px, 3vw, 22px);
+  padding:9px 22px;
   background:rgba(255,30,60,.07);
   box-shadow:inset 0 0 30px rgba(255,30,60,.2);
-  margin-bottom:clamp(15px, 4vw, 26px);
+  margin-bottom:26px;
 }
 
 #gfday .gf-title{
   font-family:'Great Vibes',cursive;
   font-weight:400;
-  font-size:clamp(42px,12vw,94px);
-  line-height:1.1;
+  font-size:clamp(46px,10vw,94px);
+  line-height:1.05;
   color:#fff;
   text-shadow:0 0 18px rgba(255,30,60,.9), 0 0 55px rgba(255,30,60,.55), 0 0 110px rgba(255,30,60,.35);
-  margin-bottom:8px;
-  word-wrap: break-word;
+  margin-bottom:10px;
 }
 #gfday .gf-title em{font-style:normal;color:#ff1e3c;}
 
 #gfday .gf-sub{
-  font-size:clamp(9px,2.5vw,13px);
-  letter-spacing:clamp(0.15em, 0.8vw, 0.34em);
+  font-size:clamp(10px,2.8vw,13px);
+  letter-spacing:.34em;
   text-transform:uppercase;
   color:#c9a7ae;
   font-weight:300;
@@ -119,15 +100,12 @@ html, body {
 
 #gfday .gf-frames{
   display:flex;flex-wrap:wrap;justify-content:center;align-items:center;
-  gap:clamp(10px, 3vw, 22px);
-  margin:clamp(25px, 5vw, 40px) 0 8px;
+  gap:22px;margin:40px 0 8px;
 }
 #gfday .gf-frame{
   position:relative;
-  /* Frames scale perfectly based on screen width */
-  width:clamp(110px, 28vw, 172px);
-  height:clamp(140px, 35vw, 212px);
-  padding:clamp(5px, 1.5vw, 9px);
+  width:172px;height:212px;
+  padding:9px;
   border-radius:14px;
   background:#120306;
   border:2px solid rgba(255,30,60,.55);
@@ -147,9 +125,6 @@ html, body {
   width:100%;height:100%;object-fit:cover;border-radius:8px;display:block;
   filter:saturate(1.06) contrast(1.05);
 }
-#gfday .gf-frame:active {
-  transform:rotate(0deg) scale(0.95);
-}
 #gfday .gf-frame:hover{
   transform:rotate(0deg) scale(1.07);
   box-shadow:
@@ -161,45 +136,42 @@ html, body {
   content:"❤";
   position:absolute;inset:9px;
   display:flex;align-items:center;justify-content:center;
-  font-size:clamp(30px, 8vw, 48px);color:#ff1e3c;
+  font-size:48px;color:#ff1e3c;
   background:radial-gradient(circle at 50% 40%,#2a0008,#0d0002);
   border-radius:8px;
   text-shadow:0 0 24px rgba(255,30,60,.9);
 }
 
 #gfday .gf-letter{
-  max-width:690px;
-  margin:clamp(25px, 5vw, 36px) auto 0;
-  padding:clamp(20px, 5vw, 34px) clamp(15px, 4vw, 28px);
+  max-width:690px;margin:36px auto 0;
+  padding:34px 28px;
   border-radius:22px;
   background:linear-gradient(160deg,rgba(32,0,9,.92),rgba(8,0,2,.95));
   border:1px solid rgba(255,30,60,.35);
   box-shadow:0 0 70px rgba(255,30,60,.18), inset 0 0 70px rgba(255,30,60,.06);
   font-weight:300;
-  font-size:clamp(13px,3.5vw,16.5px);
-  line-height:1.8;
+  font-size:clamp(14px,3.6vw,16.5px);
+  line-height:2;
   color:#f6e8eb;
 }
 #gfday .gf-letter b{color:#ff5c7a;font-weight:600;}
 #gfday .gf-letter .gf-big{
   display:block;
   font-family:'Great Vibes',cursive;
-  font-size:clamp(24px,7vw,36px);
+  font-size:clamp(26px,6vw,36px);
   color:#ff1e3c;
   text-shadow:0 0 20px rgba(255,30,60,.8);
-  margin-bottom:10px;
+  margin-bottom:14px;
   line-height:1.4;
 }
 
 #gfday .gf-stats{
-  display:flex;flex-wrap:wrap;justify-content:center;
-  gap:clamp(8px, 2vw, 14px);
-  margin:clamp(25px, 5vw, 38px) auto 0;
-  max-width:640px;
+  display:flex;flex-wrap:wrap;justify-content:center;gap:14px;
+  margin:38px auto 0;max-width:640px;
 }
 #gfday .gf-stat{
-  flex:1 1 clamp(80px, 25vw, 130px);
-  padding:clamp(12px, 3vw, 18px) clamp(8px, 2vw, 12px);
+  flex:1 1 130px;
+  padding:18px 12px;
   border-radius:16px;
   background:rgba(255,30,60,.06);
   border:1px solid rgba(255,30,60,.25);
@@ -207,7 +179,7 @@ html, body {
 }
 #gfday .gf-stat b{
   display:block;
-  font-size:clamp(20px,6vw,32px);
+  font-size:clamp(24px,6vw,32px);
   font-weight:600;
   color:#ff1e3c;
   text-shadow:0 0 22px rgba(255,30,60,.85);
@@ -216,26 +188,33 @@ html, body {
 #gfday .gf-stat span{
   display:block;
   margin-top:6px;
-  font-size:clamp(8px, 2vw, 10px);
+  font-size:10px;
   letter-spacing:.24em;
   text-transform:uppercase;
   color:#c9a7ae;
 }
 
 #gfday .gf-foot{
-  margin-top:clamp(30px, 6vw, 42px);
+  margin-top:42px;
   font-family:'Great Vibes',cursive;
-  font-size:clamp(20px,6vw,32px);
+  font-size:clamp(22px,5.5vw,32px);
   color:#ff5c7a;
   text-shadow:0 0 20px rgba(255,30,60,.75);
   line-height:1.5;
 }
 #gfday .gf-hint{
-  margin-top:clamp(15px, 3vw, 24px);
-  font-size:clamp(9px, 2vw, 11px);
+  margin-top:24px;
+  font-size:11px;
   letter-spacing:.22em;
   text-transform:uppercase;
   color:#7d5a61;
+}
+
+@media (max-width:560px){
+  #gfday{padding:52px 14px 70px;}
+  #gfday .gf-frame{width:132px;height:168px;}
+  #gfday .gf-frames{gap:13px;margin-top:32px;}
+  #gfday .gf-letter{padding:26px 20px;}
 }
 </style>
 </head>
@@ -254,15 +233,12 @@ html, body {
     <p class="gf-sub">To the girl who made me soft</p>
 
     <div class="gf-frames">
-      <!-- REPLACED WITH YOUR IMAGE 1 -->
       <div class="gf-frame" style="--r:-6deg">
         <img src="https://lh3.googleusercontent.com/d/1M4I4_Q1hJF6iJaNJDWRMv9OxkPuwfhUh" alt="Her">
       </div>
-      <!-- REPLACED WITH YOUR IMAGE 2 -->
       <div class="gf-frame" style="--r:3deg">
         <img src="https://lh3.googleusercontent.com/d/1lYqybV3McMomJcPPzH1I_Jta5AMacVwf" alt="Her">
       </div>
-      <!-- REPLACED WITH YOUR IMAGE 3 -->
       <div class="gf-frame" style="--r:-3deg">
         <img src="https://lh3.googleusercontent.com/d/1UlW44SEWM5wiNOC77n2tUYKMPh5RopEO" alt="Her">
       </div>
@@ -375,9 +351,8 @@ html, body {
   }
 
   function buildHearts() {
-    // Adjusts number of hearts based on screen width (fewer on mobile for performance)
-    var count = Math.round(W / 18);
-    count = Math.max(20, Math.min(75, count));
+    var count = Math.round(W / 15);
+    count = Math.max(28, Math.min(85, count));
     hearts = [];
     for (var i = 0; i < count; i++) hearts.push(makeHeart(true));
   }
@@ -436,17 +411,14 @@ html, body {
   buildHearts();
   loop();
 
-  // Resize listener (handles window resize and mobile orientation changes)
   var rt;
-  function handleResize() {
+  window.addEventListener('resize', function () {
     clearTimeout(rt);
     rt = setTimeout(function () {
       sizeCanvas();
       buildHearts();
     }, 180);
-  }
-  window.addEventListener('resize', handleResize);
-  window.addEventListener('orientationchange', handleResize);
+  });
 
   var popLayer = document.getElementById('gf-popups');
   var TEXTS = [
@@ -488,8 +460,7 @@ html, body {
   spawnPopup();
   setTimeout(spawnPopup, 600);
 
-  // Changed to 'pointerdown' so it triggers instantly on mobile taps without delay
-  root.addEventListener('pointerdown', function (e) {
+  root.addEventListener('click', function (e) {
     var r = root.getBoundingClientRect();
     burst(e.clientX - r.left, e.clientY - r.top);
     spawnPopup();
