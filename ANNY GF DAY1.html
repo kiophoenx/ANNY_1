@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- This meta tag is crucial for mobile responsiveness -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Happy Girlfriend's Day ❤️</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@200;300;400;600&display=swap');
+
+/* Base reset to ensure it fills the Google Sites iframe */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #060000;
+  overflow-x: hidden;
+}
+
+#gfday{
+  --red:#ff1e3c;
+  --red2:#ff5c7a;
+  position:relative;
+  width:100%;
+  /* dvh handles mobile browser address bars perfectly */
+  min-height: 100vh;
+  min-height: 100dvh;
+  /* Fluid padding that shrinks on small screens */
+  padding: clamp(30px, 6vw, 70px) clamp(10px, 4vw, 18px) clamp(50px, 8vw, 90px);
+  overflow:hidden;
+  background:
+    radial-gradient(1100px 600px at 50% -8%, #3d0011 0%, rgba(6,0,0,0) 70%),
+    radial-gradient(900px 520px at 50% 108%, #2a0009 0%, rgba(6,0,0,0) 72%),
+    #060000;
+  font-family:'Poppins',system-ui,-apple-system,"Segoe UI",sans-serif;
+  color:#fff;
+  text-align:center;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent; /* Removes blue flash on mobile tap */
+}
+#gfday *,#gfday *::before,#gfday *::after{box-sizing:border-box;}
+#gfday p,#gfday h1,#gfday h2,#gfday div,#gfday span,#gfday b{margin:0;padding:0;}
+
+#gfday #gf-rain{
+  position:absolute;left:0;top:0;width:100%;height:100%;
+  display:block;pointer-events:none;z-index:1;
+}
+
+#gfday #gf-popups{
+  position:absolute;left:0;top:0;width:100%;height:100%;
+  overflow:hidden;pointer-events:none;z-index:5;
+}
+#gfday .gf-pop{
+  position:absolute;
+  transform:translate(-50%,-50%) rotate(var(--rot,0deg));
+  font-family:'Great Vibes',cursive;
+  font-size:var(--fs,22px);
+  color:#ff6b85;
+  text-shadow:0 0 12px rgba(255,30,60,.95), 0 0 32px rgba(255,30,60,.55);
+  white-space:nowrap;
+  opacity:0;
+  animation:gfPop 2.8s ease-out forwards;
+}
+@keyframes gfPop{
+  0%  {opacity:0; transform:translate(-50%,-50%) scale(.35) rotate(var(--rot,0deg));}
+  12% {opacity:1; transform:translate(-50%,-50%) scale(1.12) rotate(var(--rot,0deg));}
+  26% {transform:translate(-50%,-50%) scale(1) rotate(var(--rot,0deg));}
+  70% {opacity:1; transform:translate(-50%,-58%) scale(1) rotate(var(--rot,0deg));}
+  100%{opacity:0; transform:translate(-50%,-135%) scale(.9) rotate(var(--rot,0deg));}
+}
+
+#gfday .gf-inner{position:relative;z-index:3;max-width:900px;margin:0 auto; width: 100%;}
+#gfday .gf-inner > *{animation:gfUp .9s cubic-bezier(.2,.8,.3,1) both;}
+#gfday .gf-inner > *:nth-child(1){animation-delay:.05s}
+#gfday .gf-inner > *:nth-child(2){animation-delay:.15s}
+#gfday .gf-inner > *:nth-child(3){animation-delay:.25s}
+#gfday .gf-inner > *:nth-child(4){animation-delay:.35s}
+#gfday .gf-inner > *:nth-child(5){animation-delay:.45s}
+#gfday .gf-inner > *:nth-child(6){animation-delay:.55s}
+#gfday .gf-inner > *:nth-child(7){animation-delay:.65s}
+@keyframes gfUp{from{opacity:0;transform:translateY(26px);}to{opacity:1;transform:none;}}
+
+#gfday .gf-eyebrow{
+  display:inline-block;
+  font-size:clamp(9px, 2vw, 11px);
+  letter-spacing:clamp(0.2em, 1vw, 0.42em);
+  text-transform:uppercase;
+  color:#ff5c7a;
+  border:1px solid rgba(255,30,60,.35);
+  border-radius:999px;
+  padding:clamp(6px, 1.5vw, 9px) clamp(14px, 3vw, 22px);
+  background:rgba(255,30,60,.07);
+  box-shadow:inset 0 0 30px rgba(255,30,60,.2);
+  margin-bottom:clamp(15px, 4vw, 26px);
+}
+
+#gfday .gf-title{
+  font-family:'Great Vibes',cursive;
+  font-weight:400;
+  font-size:clamp(42px,12vw,94px);
+  line-height:1.1;
+  color:#fff;
+  text-shadow:0 0 18px rgba(255,30,60,.9), 0 0 55px rgba(255,30,60,.55), 0 0 110px rgba(255,30,60,.35);
+  margin-bottom:8px;
+  word-wrap: break-word;
+}
+#gfday .gf-title em{font-style:normal;color:#ff1e3c;}
+
+#gfday .gf-sub{
+  font-size:clamp(9px,2.5vw,13px);
+  letter-spacing:clamp(0.15em, 0.8vw, 0.34em);
+  text-transform:uppercase;
+  color:#c9a7ae;
+  font-weight:300;
+}
+
+#gfday .gf-frames{
+  display:flex;flex-wrap:wrap;justify-content:center;align-items:center;
+  gap:clamp(10px, 3vw, 22px);
+  margin:clamp(25px, 5vw, 40px) 0 8px;
+}
+#gfday .gf-frame{
+  position:relative;
+  /* Frames scale perfectly based on screen width */
+  width:clamp(110px, 28vw, 172px);
+  height:clamp(140px, 35vw, 212px);
+  padding:clamp(5px, 1.5vw, 9px);
+  border-radius:14px;
+  background:#120306;
+  border:2px solid rgba(255,30,60,.55);
+  box-shadow:
+    0 0 0 1px rgba(255,30,60,.15),
+    0 18px 40px rgba(0,0,0,.85),
+    0 0 45px rgba(255,30,60,.28);
+  transform:rotate(var(--r,0deg));
+  transition:transform .45s cubic-bezier(.2,.9,.3,1.5), box-shadow .45s;
+  overflow:hidden;
+}
+#gfday .gf-frame::after{
+  content:"";position:absolute;inset:0;pointer-events:none;border-radius:14px;
+  background:linear-gradient(140deg,rgba(255,255,255,.15),rgba(255,255,255,0) 46%);
+}
+#gfday .gf-frame img{
+  width:100%;height:100%;object-fit:cover;border-radius:8px;display:block;
+  filter:saturate(1.06) contrast(1.05);
+}
+#gfday .gf-frame:active {
+  transform:rotate(0deg) scale(0.95);
+}
+#gfday .gf-frame:hover{
+  transform:rotate(0deg) scale(1.07);
+  box-shadow:
+    0 0 0 1px rgba(255,30,60,.45),
+    0 22px 52px rgba(0,0,0,.9),
+    0 0 65px rgba(255,30,60,.6);
+}
+#gfday .gf-frame.gf-empty::before{
+  content:"❤";
+  position:absolute;inset:9px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:clamp(30px, 8vw, 48px);color:#ff1e3c;
+  background:radial-gradient(circle at 50% 40%,#2a0008,#0d0002);
+  border-radius:8px;
+  text-shadow:0 0 24px rgba(255,30,60,.9);
+}
+
+#gfday .gf-letter{
+  max-width:690px;
+  margin:clamp(25px, 5vw, 36px) auto 0;
+  padding:clamp(20px, 5vw, 34px) clamp(15px, 4vw, 28px);
+  border-radius:22px;
+  background:linear-gradient(160deg,rgba(32,0,9,.92),rgba(8,0,2,.95));
+  border:1px solid rgba(255,30,60,.35);
+  box-shadow:0 0 70px rgba(255,30,60,.18), inset 0 0 70px rgba(255,30,60,.06);
+  font-weight:300;
+  font-size:clamp(13px,3.5vw,16.5px);
+  line-height:1.8;
+  color:#f6e8eb;
+}
+#gfday .gf-letter b{color:#ff5c7a;font-weight:600;}
+#gfday .gf-letter .gf-big{
+  display:block;
+  font-family:'Great Vibes',cursive;
+  font-size:clamp(24px,7vw,36px);
+  color:#ff1e3c;
+  text-shadow:0 0 20px rgba(255,30,60,.8);
+  margin-bottom:10px;
+  line-height:1.4;
+}
+
+#gfday .gf-stats{
+  display:flex;flex-wrap:wrap;justify-content:center;
+  gap:clamp(8px, 2vw, 14px);
+  margin:clamp(25px, 5vw, 38px) auto 0;
+  max-width:640px;
+}
+#gfday .gf-stat{
+  flex:1 1 clamp(80px, 25vw, 130px);
+  padding:clamp(12px, 3vw, 18px) clamp(8px, 2vw, 12px);
+  border-radius:16px;
+  background:rgba(255,30,60,.06);
+  border:1px solid rgba(255,30,60,.25);
+  box-shadow:inset 0 0 35px rgba(255,30,60,.09);
+}
+#gfday .gf-stat b{
+  display:block;
+  font-size:clamp(20px,6vw,32px);
+  font-weight:600;
+  color:#ff1e3c;
+  text-shadow:0 0 22px rgba(255,30,60,.85);
+  line-height:1.2;
+}
+#gfday .gf-stat span{
+  display:block;
+  margin-top:6px;
+  font-size:clamp(8px, 2vw, 10px);
+  letter-spacing:.24em;
+  text-transform:uppercase;
+  color:#c9a7ae;
+}
+
+#gfday .gf-foot{
+  margin-top:clamp(30px, 6vw, 42px);
+  font-family:'Great Vibes',cursive;
+  font-size:clamp(20px,6vw,32px);
+  color:#ff5c7a;
+  text-shadow:0 0 20px rgba(255,30,60,.75);
+  line-height:1.5;
+}
+#gfday .gf-hint{
+  margin-top:clamp(15px, 3vw, 24px);
+  font-size:clamp(9px, 2vw, 11px);
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:#7d5a61;
+}
+</style>
+</head>
+<body style="margin:0;background:#060000;">
+
+<div id="gfday">
+  <canvas id="gf-rain"></canvas>
+  <div id="gf-popups"></div>
+
+  <div class="gf-inner">
+
+    <div class="gf-eyebrow">151 Days &nbsp;•&nbsp; 5 Months &nbsp;•&nbsp; Forever</div>
+
+    <h1 class="gf-title">Happy <em>Girlfriend's</em> Day</h1>
+
+    <p class="gf-sub">To the girl who made me soft</p>
+
+    <div class="gf-frames">
+      <!-- REPLACED WITH YOUR IMAGE 1 -->
+      <div class="gf-frame" style="--r:-6deg">
+        <img src="https://lh3.googleusercontent.com/d/1M4I4_Q1hJF6iJaNJDWRMv9OxkPuwfhUh" alt="Her">
+      </div>
+      <!-- REPLACED WITH YOUR IMAGE 2 -->
+      <div class="gf-frame" style="--r:3deg">
+        <img src="https://lh3.googleusercontent.com/d/1lYqybV3McMomJcPPzH1I_Jta5AMacVwf" alt="Her">
+      </div>
+      <!-- REPLACED WITH YOUR IMAGE 3 -->
+      <div class="gf-frame" style="--r:-3deg">
+        <img src="https://lh3.googleusercontent.com/d/1UlW44SEWM5wiNOC77n2tUYKMPh5RopEO" alt="Her">
+      </div>
+    </div>
+
+    <div class="gf-letter">
+      <span class="gf-big">I love you soo much ❤️</span>
+      I was such a feeling-less monster before you. I didn't feel things the way people are
+      supposed to. Then you came, and you made me <b>soft</b>. You turned everything
+      red in the best way possible.<br><br>
+      <b>151 days</b> with you — more than <b>5 months</b> — and every single one of them
+      I've loved you more than the day before. You're my favourite person, my calm,
+      my whole heart.<br><br>
+      I love you soo much. And I will <b>marry you</b> — whatever it costs. 🖤
+    </div>
+
+    <div class="gf-stats">
+      <div class="gf-stat"><b id="gf-days">151</b><span>Days</span></div>
+      <div class="gf-stat"><b>5+</b><span>Months</span></div>
+      <div class="gf-stat"><b>∞</b><span>Forever</span></div>
+    </div>
+
+    <div class="gf-foot">You &amp; Me &nbsp;•&nbsp; Always 🖤</div>
+    <div class="gf-hint">tap anywhere for more love</div>
+
+  </div>
+</div>
+
+<script>
+(function () {
+  var root = document.getElementById('gfday');
+  if (!root) return;
+
+  var START_DATE = "";   // e.g. "2025-01-15" to auto-count. Leave "" to keep 151.
+
+  if (START_DATE) {
+    var days = Math.floor((Date.now() - new Date(START_DATE).getTime()) / 86400000);
+    if (days > 0) {
+      var el = document.getElementById('gf-days');
+      if (el) el.textContent = days;
+    }
+  }
+
+  root.querySelectorAll('.gf-frame img').forEach(function (img) {
+    img.addEventListener('error', function () {
+      img.style.display = 'none';
+      img.parentNode.classList.add('gf-empty');
+    });
+  });
+
+  var canvas = document.getElementById('gf-rain');
+  var ctx = canvas.getContext('2d');
+  var W = 0, H = 0, dpr = 1;
+  var hearts = [];
+  var bursts = [];
+  var COLORS = ['#ff1e3c', '#ff5c7a', '#c2001f', '#ff8fa3', '#8b0016', '#ff2d55'];
+
+  function sizeCanvas() {
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    W = root.clientWidth;
+    H = root.clientHeight;
+    canvas.width  = Math.floor(W * dpr);
+    canvas.height = Math.floor(H * dpr);
+    canvas.style.width  = W + 'px';
+    canvas.style.height = H + 'px';
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+
+  function heartPath(w, h) {
+    var top = h * 0.3;
+    ctx.beginPath();
+    ctx.moveTo(0, -h / 2 + top);
+    ctx.bezierCurveTo(0, -h / 2, -w / 2, -h / 2, -w / 2, -h / 2 + top);
+    ctx.bezierCurveTo(-w / 2, -h / 2 + (h + top) / 2, 0, -h / 2 + (h + top) / 2, 0, h / 2);
+    ctx.bezierCurveTo(0, -h / 2 + (h + top) / 2, w / 2, -h / 2 + (h + top) / 2, w / 2, -h / 2 + top);
+    ctx.bezierCurveTo(w / 2, -h / 2, 0, -h / 2, 0, -h / 2 + top);
+    ctx.closePath();
+  }
+
+  function drawHeart(x, y, size, rot, alpha, color, glow) {
+    var s = size / 16;
+    ctx.save();
+    ctx.translate(x, y);
+    ctx.rotate(rot);
+    ctx.scale(s, s);
+    ctx.globalAlpha = alpha;
+    ctx.fillStyle = color;
+    if (glow) { ctx.shadowColor = color; ctx.shadowBlur = 12; }
+    heartPath(16, 15);
+    ctx.fill();
+    ctx.restore();
+  }
+
+  function makeHeart(initial) {
+    var bx = Math.random() * W;
+    return {
+      bx: bx,
+      x: bx,
+      y: initial ? Math.random() * H : -40 - Math.random() * 120,
+      size: 9 + Math.random() * 19,
+      speed: 0.35 + Math.random() * 1.35,
+      sway: 14 + Math.random() * 34,
+      swaySpeed: 0.005 + Math.random() * 0.013,
+      phase: Math.random() * Math.PI * 2,
+      rot: (Math.random() - 0.5) * 0.7,
+      rotSpeed: (Math.random() - 0.5) * 0.009,
+      alpha: 0.22 + Math.random() * 0.55,
+      color: COLORS[(Math.random() * COLORS.length) | 0]
+    };
+  }
+
+  function buildHearts() {
+    // Adjusts number of hearts based on screen width (fewer on mobile for performance)
+    var count = Math.round(W / 18);
+    count = Math.max(20, Math.min(75, count));
+    hearts = [];
+    for (var i = 0; i < count; i++) hearts.push(makeHeart(true));
+  }
+
+  function burst(x, y) {
+    for (var i = 0; i < 14; i++) {
+      var a = Math.random() * Math.PI * 2;
+      var sp = 1.6 + Math.random() * 3.4;
+      bursts.push({
+        x: x, y: y,
+        vx: Math.cos(a) * sp,
+        vy: Math.sin(a) * sp - 2.2,
+        size: 8 + Math.random() * 14,
+        rot: Math.random() * Math.PI,
+        rotSpeed: (Math.random() - 0.5) * 0.16,
+        life: 1,
+        color: COLORS[(Math.random() * COLORS.length) | 0]
+      });
+    }
+  }
+
+  function loop() {
+    ctx.clearRect(0, 0, W, H);
+
+    for (var i = 0; i < hearts.length; i++) {
+      var h = hearts[i];
+      h.y += h.speed;
+      h.phase += h.swaySpeed;
+      h.rot += h.rotSpeed;
+      h.x = h.bx + Math.sin(h.phase) * h.sway;
+
+      if (h.y > H + 60) {
+        hearts[i] = makeHeart(false);
+        continue;
+      }
+      drawHeart(h.x, h.y, h.size, h.rot, h.alpha, h.color, false);
+    }
+
+    for (var j = bursts.length - 1; j >= 0; j--) {
+      var b = bursts[j];
+      b.vy += 0.075;
+      b.vx *= 0.985;
+      b.x += b.vx;
+      b.y += b.vy;
+      b.rot += b.rotSpeed;
+      b.life -= 0.011;
+
+      if (b.life <= 0 || b.y > H + 80) { bursts.splice(j, 1); continue; }
+      drawHeart(b.x, b.y, b.size, b.rot, Math.max(b.life, 0) * 0.95, b.color, true);
+    }
+
+    requestAnimationFrame(loop);
+  }
+
+  sizeCanvas();
+  buildHearts();
+  loop();
+
+  // Resize listener (handles window resize and mobile orientation changes)
+  var rt;
+  function handleResize() {
+    clearTimeout(rt);
+    rt = setTimeout(function () {
+      sizeCanvas();
+      buildHearts();
+    }, 180);
+  }
+  window.addEventListener('resize', handleResize);
+  window.addEventListener('orientationchange', handleResize);
+
+  var popLayer = document.getElementById('gf-popups');
+  var TEXTS = [
+    'I love you soo much ❤️',
+    'I love youuuu 🖤',
+    'My whole world ❤️',
+    '151 days of you 💕',
+    'You made me soft 🥺',
+    'Forever & always ❤️',
+    'Marry me 💍',
+    'My girl 🖤',
+    'I love you more 💗',
+    'You & me, always ❤️'
+  ];
+  var alive = 0;
+
+  function spawnPopup() {
+    if (alive > 9 || document.hidden) return;
+    var el = document.createElement('div');
+    el.className = 'gf-pop';
+    el.textContent = TEXTS[(Math.random() * TEXTS.length) | 0];
+
+    var h = root.clientHeight || 800;
+    el.style.left = (8 + Math.random() * 84) + '%';
+    el.style.top  = (Math.random() * h * 0.9 + h * 0.05) + 'px';
+    el.style.setProperty('--rot', ((Math.random() - 0.5) * 16).toFixed(1) + 'deg');
+    el.style.setProperty('--fs', (15 + Math.random() * 15).toFixed(0) + 'px');
+
+    popLayer.appendChild(el);
+    alive++;
+
+    setTimeout(function () {
+      if (el.parentNode) el.parentNode.removeChild(el);
+      alive--;
+    }, 2900);
+  }
+
+  setInterval(spawnPopup, 1250);
+  spawnPopup();
+  setTimeout(spawnPopup, 600);
+
+  // Changed to 'pointerdown' so it triggers instantly on mobile taps without delay
+  root.addEventListener('pointerdown', function (e) {
+    var r = root.getBoundingClientRect();
+    burst(e.clientX - r.left, e.clientY - r.top);
+    spawnPopup();
+  });
+
+})();
+</script>
+</body>
+</html>
